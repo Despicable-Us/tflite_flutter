@@ -719,6 +719,7 @@ public class TflitePlugin implements FlutterPlugin, MethodCallHandler, ActivityA
       outputMap.put(0, outputLocations);
       outputMap.put(1, outputClasses);
       outputMap.put(2, outputScores);
+      numDetections[0]=10.0f;
       outputMap.put(3, numDetections);
 
       startTime = SystemClock.uptimeMillis();
