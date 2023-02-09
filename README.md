@@ -35,7 +35,7 @@ Add  this to your flutter dependencies
 ```
 tflite:
     git:
-      url: https://github.com/Despicable-Us/tflite_flutter.git
+      url: https://github.com/St-Luciferr/flutter_tflite.git
 ```
 
 ### Android
