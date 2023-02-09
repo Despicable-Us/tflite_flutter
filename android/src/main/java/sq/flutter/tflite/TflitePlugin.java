@@ -1,5 +1,4 @@
 package sq.flutter.tflite;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
@@ -708,7 +707,8 @@ public class TflitePlugin implements FlutterPlugin, MethodCallHandler, ActivityA
 
     RunSSDMobileNet(HashMap args, ByteBuffer imgData, int numResultsPerClass, float threshold, Result result) {
       super(args, result);
-      this.num = tfLite.getOutputTensor(0).shape()[1];
+      // this.num = tfLite.getOutputTensor(0).shape()[1];
+      this.num=10;
       this.numResultsPerClass = numResultsPerClass;
       this.threshold = threshold;
       this.outputLocations = new float[1][num][4];
