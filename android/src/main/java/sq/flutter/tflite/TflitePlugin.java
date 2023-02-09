@@ -708,7 +708,6 @@ public class TflitePlugin implements FlutterPlugin, MethodCallHandler, ActivityA
     RunSSDMobileNet(HashMap args, ByteBuffer imgData, int numResultsPerClass, float threshold, Result result) {
       super(args, result);
       this.num = tfLite.getOutputTensor(0).shape()[1];
-      this.num=10;
       this.numResultsPerClass = numResultsPerClass;
       this.threshold = threshold;
       this.outputLocations = new float[1][num][4];
@@ -719,7 +718,6 @@ public class TflitePlugin implements FlutterPlugin, MethodCallHandler, ActivityA
       outputMap.put(0, outputLocations);
       outputMap.put(1, outputClasses);
       outputMap.put(2, outputScores);
-      numDetections[0]=10.0f;
       outputMap.put(3, numDetections);
 
       startTime = SystemClock.uptimeMillis();
